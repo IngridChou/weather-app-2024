@@ -1,5 +1,5 @@
 interface ICurrentProps {
-    dt: string
+    dt: any
     name: string
     sys: {
         country: string
@@ -12,6 +12,7 @@ interface ICurrentProps {
     weather: {
         0: {
             main: string
+            icon: string
         }
     };
     wind: {
@@ -22,6 +23,7 @@ interface ICurrentProps {
 interface IForecastProps {
     list: {
         [key: number]: {
+            dt: any
             main: {
                 temp: number;
             }
@@ -29,6 +31,7 @@ interface IForecastProps {
                 0: {
                     main: string
                     description: string
+                    icon: string
                 }
             }
             wind: {
